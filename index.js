@@ -1,15 +1,10 @@
 const weightForm = document.getElementById("weightForm")
 const bmiStatus   = document.getElementById("bmiStatus")
 
+// global variable 
+let bmi;
 
 // display weight function 
-
-function displayWeight(event){
-    event.preventDefault()
-    console.log("Hello from form");
-}
-
-let bmi;
 
 
 weightForm.addEventListener('submit', (event) =>{
@@ -17,18 +12,14 @@ weightForm.addEventListener('submit', (event) =>{
     let weight = getInputValue("weight")
     let height = getInputValue("height")
     let pettern = /^-?\d+(\.\d+)?$/
-    if(pettern.test(weight) && weight !== '' && pettern.test(height) && height !== ''){
+    if(pettern.test(weight) && pettern.test(height)){
     weight = parseFloat(weight)
-    height = parseFloat(height)
-    
-    height = Number((height / 100).toFixed(2))
+    height = parseFloat(height / 100)
 
    bmi = weight / (height * height)
 
-   bmi = parseFloat(bmi.toFixed(1));
-   console.log( bmi);
+   bmi = parseFloat(bmi.toFixed(2));
 
-    // console.log(typeof bmi, bmi);
     if(bmi < 18.5){
         bmiStatus.innerText = `তোমার ওজন অনেক হালকা। তোমার BMI হলো ${bmi}।`
     }else if(bmi >= 18.5 && bmi < 24.9){
