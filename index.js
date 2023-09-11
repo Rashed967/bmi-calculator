@@ -12,8 +12,6 @@ function displayWeight(event){
 let bmi;
 
 
-
-
 weightForm.addEventListener('submit', (event) =>{
     event.preventDefault()
     let weight = getInputValue("weight")
@@ -32,17 +30,17 @@ weightForm.addEventListener('submit', (event) =>{
 
     // console.log(typeof bmi, bmi);
     if(bmi < 18.5){
-        console.log("underweight");
+        bmiStatus.innerText = `তোমার ওজন অনেক হালকা। তোমার BMI হলো ${bmi}।`
     }else if(bmi >= 18.5 && bmi < 24.9){
-        console.log("normal weight");
+        bmiStatus.innerText = `তোমার ওজন ঠিক আছে। তোমার BMI হলো ${bmi}।`
     }else if(bmi >= 25 && bmi <= 29.9){
-        console.log("Over Weight");
+        bmiStatus.innerText = `তোমার ওজন অনেক বেশি। তোমার BMI হলো ${bmi}।`
     }else if(bmi >= 30){
-        console.log("Obese");
+        bmiStatus.innerText = `তুমি অনেক বেশি মোটা। তোমার BMI হলো ${bmi}।`
     }
  
     }else{
-        return alert("Enter a valid number")
+        return alert("সঠিক সংখ্যা লিখো।")
     }
 })
 
