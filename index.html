@@ -8,18 +8,29 @@
 <body>
     <h1>BMI calculator</h1>
     
-    <form id="weightForm">
-        <label for="weight">Weight</label>
-        <br>
-        <input type="text" name="weight" id="weight">
-        <br>
-        <label for="height">Height</label>
-        <br>
-        <input type="text" name="height" id="height">
-        <br>
-        <br>
-        <input type="submit" value="Submit">
-    </form>
+    <!-- bmi form  -->
+    <div>
+        <form id="weightForm">
+            <label for="weight">Weight</label>
+            <br>
+            <input type="text" name="weight" id="weight">
+            <br>
+            <label for="height">Height</label>
+            <br>
+            <input type="text" name="height" id="height">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- bmi status  -->
+    <div>
+        <h3>BMI status</h3>
+        <p id="bmiStatus">Your BMI status is here </p>
+    </div>
+
+
     <script src="./index.js"></script>
 </body>
 </html>
