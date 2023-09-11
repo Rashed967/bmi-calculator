@@ -24,9 +24,10 @@ weightForm.addEventListener('submit', (event) =>{
     height = parseFloat(height)
     
     height = Number((height / 100).toFixed(2))
-   console.log( height);
+
    bmi = weight / (height * height)
-   bmi = parseFloat(bmi.toFixed(2));
+
+   bmi = parseFloat(bmi.toFixed(1));
    console.log( bmi);
 
     // console.log(typeof bmi, bmi);
